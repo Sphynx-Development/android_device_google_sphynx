@@ -30,6 +30,10 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE      := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sphynx
 
+# Boot image
+BOARD_BOOT_HEADER_VERSION := 1
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
 # Bootloader versions
 TARGET_BOARD_INFO_FILE := device/google/sphynx/board-info.txt
 
