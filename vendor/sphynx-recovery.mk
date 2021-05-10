@@ -12,12 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/nvidia/t210-common/vendor/t210-by-flags.mk)
-$(call inherit-product, device/nvidia/tegra-common/vendor/common-by-flags.mk)
-$(call inherit-product, device/google/sphynx/vendor/bcm_firmware/bcm.mk)
-$(call inherit-product, device/google/sphynx/vendor/sphynx-recovery.mk)
+SPHYNX_FIRMWARE_PATH := vendor/google/sphynx/firmware
 
-PRODUCT_PACKAGES += public.libraries
-
-# Smaug bpmp
-PRODUCT_PACKAGES += bpmp_smaug
+# Firmware
+PRODUCT_COPY_FILES += \
+    $(SPHYNX_FIRMWARE_PATH)/bpmp.bin:recovery/root/system/etc/firmware/tegra21x/bpmp_smaug.bin

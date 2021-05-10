@@ -1,4 +1,4 @@
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/nvidia/t210-common/vendor/t210-by-flags.mk)
-$(call inherit-product, device/nvidia/tegra-common/vendor/common-by-flags.mk)
-$(call inherit-product, device/google/sphynx/vendor/bcm_firmware/bcm.mk)
-$(call inherit-product, device/google/sphynx/vendor/sphynx-recovery.mk)
+LOCAL_PATH := $(call my-dir)
+SPHYNX_FIRMWARE_PATH := ../../../../../vendor/nvidia/foster/firmware
 
-PRODUCT_PACKAGES += public.libraries
-
-# Smaug bpmp
-PRODUCT_PACKAGES += bpmp_smaug
+include $(CLEAR_VARS)
+LOCAL_MODULE               := bpmp_smaug
+LOCAL_SRC_FILES            := $(SPHYNX_FIRMWARE_PATH)/bpmp.bin
+LOCAL_MODULE_SUFFIX        := .bin
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware/tegra21x
+LOCAL_MODULE_TAGS          := optional
+LOCAL_MODULE_OWNER         := nvidia
+include $(BUILD_NVIDIA_ARCH_PREBUILT)
