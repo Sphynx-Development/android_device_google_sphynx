@@ -90,13 +90,6 @@ endif
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH  := 1800
 
-# EKS
-ifeq ($(TARGET_TEGRA_KEYSTORE),nvkeystore)
-PRODUCT_PACKAGES += \
-    init.eks2.rc \
-    eks2_public.dat
-endif
-
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_FORCE_PREBUILT_KERNEL := true
