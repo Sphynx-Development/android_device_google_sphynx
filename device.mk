@@ -92,13 +92,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4.vendor
 
-# Kernel
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_FORCE_PREBUILT_KERNEL := true
-else
+# Kernel Modules
 PRODUCT_PACKAGES += \
     cypress-fmac
-endif
 
 # Keylayouts
 PRODUCT_PACKAGES += \
