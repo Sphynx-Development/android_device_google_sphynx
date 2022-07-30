@@ -90,13 +90,9 @@ endif
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH  := 1800
 
-# Kernel
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_FORCE_PREBUILT_KERNEL := true
-else
+# Kernel Modules
 PRODUCT_PACKAGES += \
     cypress-fmac
-endif
 
 # Keylayouts
 PRODUCT_PACKAGES += \
