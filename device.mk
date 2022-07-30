@@ -92,13 +92,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4.vendor
 
-# EKS
-ifeq ($(TARGET_TEGRA_KEYSTORE),nvkeystore)
-PRODUCT_PACKAGES += \
-    init.eks2.rc \
-    eks2_public.dat
-endif
-
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_FORCE_PREBUILT_KERNEL := true
