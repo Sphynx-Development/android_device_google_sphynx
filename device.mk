@@ -141,9 +141,3 @@ PRODUCT_PACKAGES += \
 
 # VBoot
 $(call inherit-product, build/target/product/vboot.mk)
-
-# WiFi
-ifeq ($(TARGET_TEGRA_WIFI),bcm)
-PRODUCT_PACKAGES += \
-    wifi_scan_config.conf
-endif
