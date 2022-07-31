@@ -55,7 +55,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/sphynx
 PRODUCT_PACKAGES += \
     fstab.sphynx \
     init.sphynx.rc \
-    init.loki_e_common.rc \
     init.loki_foster_e_common.rc \
     init.recovery.sphynx.rc \
     power.sphynx.rc
