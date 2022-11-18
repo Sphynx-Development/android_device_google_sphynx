@@ -13,7 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := device/google/sphynx/vendor/bcm_firmware
-COMMON_BCM_PATH := device/nvidia/tegra-common/vendor/bcm_firmware
+COMMON_BCM_PATH := device/nvidia/tegra-common/vendor/rel-shield-r/bcm_firmware
 
 $(call inherit-product, $(COMMON_BCM_PATH)/bcm4354/device-bcm.mk)
 $(call inherit-product, $(LOCAL_PATH)/clm.mk)
