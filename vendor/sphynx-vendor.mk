@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import init.recovery.foster_common.rc
+$(call inherit-product, device/nvidia/t210-common/vendor/t210.mk)
+$(call inherit-product, device/nvidia/tegra-common/vendor/common-by-flags.mk)
+$(call inherit-product, device/google/sphynx/vendor/bcm_firmware/bcm.mk)
+$(call inherit-product, device/nvidia/shield-common/vendor/shield-by-flags.mk)
 
-on init
-    setprop persist.twrp.rotation 270
-    setprop ro.minui.default_rotation "ROTATION_LEFT"
-    write /sys/bus/platform/drivers/tegra-reboot2payload/r2p/default_payload_ready 1
+PRODUCT_PACKAGES += public.libraries

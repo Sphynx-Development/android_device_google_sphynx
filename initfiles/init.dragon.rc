@@ -17,5 +17,5 @@ import /vendor/etc/init/hw/init.t210.rc
 import /vendor/etc/init/hw/init.loki_e_common.rc
 
 on fs
-    mount_all /vendor/etc/fstab.dragon
-    swapon_all /vendor/etc/fstab.dragon
+    mount_all /vendor/etc/fstab.sphynx
+    swapon_all /vendor/etc/fstab.sphynx

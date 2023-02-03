@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,15 +18,6 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE        := gpio-keys.kl
 LOCAL_SRC_FILES     := gpio-keys.kl
-LOCAL_MODULE_TAGS   := optional
-LOCAL_MODULE_CLASS  := ETC
-LOCAL_VENDOR_MODULE := true
-LOCAL_MODULE_PATH   := $(TARGET_OUT_VENDOR)/usr/keylayout
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE        := gpio-keys-loki.kl
-LOCAL_SRC_FILES     := gpio-keys-loki.kl
 LOCAL_MODULE_TAGS   := optional
 LOCAL_MODULE_CLASS  := ETC
 LOCAL_VENDOR_MODULE := true

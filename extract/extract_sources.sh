@@ -14,5 +14,4 @@
 # limitations under the License.
 #
 
-FILELIST_PATHS+=("foster");
-PATCH_PATHS+=("foster");
+FILELIST_PATHS+=("sphynx");

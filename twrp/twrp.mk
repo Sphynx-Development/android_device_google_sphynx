@@ -16,7 +16,7 @@ TARGET_KERNEL_CONFIG   := tegra_android_recovery_defconfig
 BOARD_KERNEL_CMDLINE   := androidboot.selinux=permissive
 BOARD_RAMDISK_USE_LZMA := true
 
-PRODUCT_COPY_FILES += device/nvidia/foster/twrp/twrp.fstab:recovery/root/system/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/google/sphynx/twrp/twrp.fstab:recovery/root/system/etc/twrp.fstab
 
 TW_THEME             := landscape_hdpi
 TW_NO_SCREEN_TIMEOUT := true

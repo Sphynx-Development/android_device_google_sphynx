@@ -12,12 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit Sphynx-specific LineageOS additions.
+include device/google/sphynx/lineage.mk
+
+# Inherit some common AOSP stuff.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
 # Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
-# Inherit device configuration for foster.
-include device/nvidia/foster/lineage.mk
-$(call inherit-product, device/nvidia/foster/full_foster.mk)
+# Inherit device configuration for sphynx.
+$(call inherit-product, device/google/sphynx/device.mk)
 
-PRODUCT_NAME := lineage_foster
-PRODUCT_DEVICE := foster
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := lineage_sphynx
+PRODUCT_DEVICE := sphynx
+PRODUCT_BRAND := Google
+PRODUCT_MANUFACTURER := Google
+PRODUCT_MODEL := Pixel C
