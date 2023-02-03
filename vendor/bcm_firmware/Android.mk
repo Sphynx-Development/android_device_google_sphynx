@@ -13,7 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
-SPHYNX_BCM_PATH := ../../../../../vendor/google/sphynx/bcm_firmware
+SPHYNX_BCM_PATH := ../../../../../vendor/nvidia/foster/rel-shield-r/bcm_firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := nvram_smaug_4354
