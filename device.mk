@@ -83,10 +83,6 @@ endif
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH  := 1800
 
-# Kernel Modules
-PRODUCT_PACKAGES += \
-    cypress-fmac
-
 # Keylayouts
 PRODUCT_PACKAGES += \
     gpio-keys.kl
