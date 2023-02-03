@@ -19,7 +19,6 @@ TARGET_TEGRA_VARIANT    ?= common
 TARGET_TEGRA_AUDIO    ?= nvaudio
 TARGET_TEGRA_BT       ?= bcm
 TARGET_TEGRA_CAMERA   ?= nvcamera
-TARGET_TEGRA_CEC      ?= nvhdmi
 TARGET_TEGRA_KERNEL   ?= 4.9
 TARGET_TEGRA_KEYSTORE ?= software
 TARGET_TEGRA_MEMTRACK ?= nvmemtrack
@@ -63,12 +62,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml
-
-# ATV specific stuff
-ifeq ($(PRODUCT_IS_ATV),true)
-    PRODUCT_PACKAGES += \
-        android.hardware.tv.input@1.0-impl
-endif
 
 # Audio
 ifeq ($(TARGET_TEGRA_AUDIO),nvaudio)
