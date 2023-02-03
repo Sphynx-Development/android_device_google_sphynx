@@ -76,6 +76,12 @@ endif
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH  := 1800
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4.vendor
+
 # Keylayouts
 PRODUCT_PACKAGES += \
     gpio-keys.kl
