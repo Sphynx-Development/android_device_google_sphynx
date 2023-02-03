@@ -14,7 +14,3 @@
 
 TARGET_TEGRA_KEYSTORE ?= nvkeystore
 TARGET_TEGRA_POWER    ?= lineage
-
-# Boot Animation
-TARGET_SCREEN_HEIGHT      := 1920
-TARGET_SCREEN_WIDTH       := 1080

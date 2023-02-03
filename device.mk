@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
     nvaudio_fx.xml
 endif
 
+# Boot Animation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH  := 1800
+
 # EKS
 ifeq ($(TARGET_TEGRA_KEYSTORE),nvkeystore)
 PRODUCT_PACKAGES += \
@@ -170,6 +174,9 @@ PRODUCT_PACKAGES += $(PRODUCT_PACKAGES_SHIPPING_API_LEVEL_29)
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+# VBoot
+$(call inherit-product, build/target/product/vboot.mk)
 
 # WiFi
 ifeq ($(TARGET_TEGRA_WIFI),bcm)
