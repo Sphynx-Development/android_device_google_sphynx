@@ -13,11 +13,12 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
+SPHYNX_EXTERNAL_BCM_PATH := ../../../../../vendor/nvidia/foster/external/bcm_firmware
 SPHYNX_BCM_PATH := ../../../../../vendor/nvidia/foster/rel-shield-r/bcm_firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := nvram_smaug_4354
-LOCAL_SRC_FILES            := $(SPHYNX_BCM_PATH)/bcm4354/bcmdhd.cal
+LOCAL_SRC_FILES            := $(SPHYNX_EXTERNAL_BCM_PATH)/bcm4354/bcmdhd.cal
 LOCAL_MODULE_SUFFIX        := .txt
 LOCAL_MODULE_CLASS         := ETC
 LOCAL_MODULE_PATH          := $(TARGET_OUT_VENDOR)/firmware
