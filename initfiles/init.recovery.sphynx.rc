@@ -1,4 +1,4 @@
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+import init.recovery.usb.rc
 
-# Inherit device configuration for foster.
-include device/nvidia/foster/lineage.mk
-$(call inherit-product, device/nvidia/foster/full_foster.mk)
-
-PRODUCT_NAME := lineage_foster
-PRODUCT_DEVICE := foster
+on post-fs
+    rm /dev/block/by-name/LNX
+    symlink /dev/block/by-name/KERN-A /dev/block/by-name/LNX
+    symlink /dev/block/by-name/recovery /dev/block/by-name/SOS
+    symlink /dev/block/by-name/VNR /dev/block/by-name/vendor

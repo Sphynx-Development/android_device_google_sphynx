@@ -12,4 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import init.recovery.usb.rc
+import /vendor/etc/init/hw/init.tegra.rc
+import /vendor/etc/init/hw/init.t210.rc
+import /vendor/etc/init/hw/init.loki_e_common.rc
+
+on fs
+    mount_all /vendor/etc/fstab.sphynx
+    swapon_all /vendor/etc/fstab.sphynx

@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,4 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
-                    nvram_darcy_a00 \
-                    nvram_foster_e_4354 \
-                    nvram_foster_e_antenna_tuned_4354 \
-                    nvram_loki_e_4354 \
-                    nvram_loki_e_antenna_tuned_4354 \
-                    nvram_jetsonE_cv_4354 \
-                    nvram_smaug_4354 \
-                    brcmfmac4356-pcie.txt
+                    nvram_smaug_4354
