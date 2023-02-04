@@ -34,6 +34,12 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     bluedroid_pm
 
+# Sphynx specific audio drivers
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    snd_soc_max98357a \
+    snd_soc_rt5677 \
+    snd_soc_nau8825
+
 # Tegra hdmi audio
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     snd_hda_tegra
