@@ -60,7 +60,8 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio_effects.xml \
-    audio_policy_configuration.xml
+    audio_policy_configuration.xml \
+    audio.sphynx.xml
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2560
