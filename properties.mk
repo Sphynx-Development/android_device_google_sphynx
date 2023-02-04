@@ -10,8 +10,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += \
     persist.sys.NV_ECO.IF.CHARGING=false
 
-# USB configfs
+# USB
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.lineage.tegra.model=$(PRODUCT_DEVICE) \
     ro.vendor.nv.usb.pid.adb=7104 \
     ro.vendor.nv.usb.pid.accessory.adb=7105 \
     ro.vendor.nv.usb.pid.audio_source.adb=7106 \
