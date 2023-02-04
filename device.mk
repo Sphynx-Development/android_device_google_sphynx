@@ -14,12 +14,13 @@
 # limitations under the License.
 #
 
-TARGET_TEGRA_VARIANT    ?= common
+TARGET_TEGRA_VARIANT ?= common
 
-TARGET_TEGRA_BT       ?= bcm
-TARGET_TEGRA_CAMERA   ?= rel-shield-r
-TARGET_TEGRA_KERNEL   ?= 4.9
-TARGET_TEGRA_WIFI     ?= bcm
+TARGET_TEGRA_AUDIO  :=
+TARGET_TEGRA_BT     ?= bcm
+TARGET_TEGRA_CAMERA ?= rel-shield-r
+TARGET_TEGRA_KERNEL ?= 4.9
+TARGET_TEGRA_WIFI   ?= bcm
 
 TARGET_TEGRA_WIREGUARD ?= compat
 
@@ -57,13 +58,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml
 
 # Audio
-ifneq ($(filter rel-shield-r, $(TARGET_TEGRA_AUDIO)),)
 PRODUCT_PACKAGES += \
     audio_effects.xml \
-    audio_policy_configuration.xml \
-    nvaudio_conf.xml \
-    nvaudio_fx.xml
-endif
+    audio_policy_configuration.xml
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -124,6 +121,21 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.audio@6.0 \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.common@6.0 \
+    android.hardware.audio.common@6.0-util \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio.primary.sphynx \
+    android.hardware.soundtrigger@2.1-impl
 
 # VBoot
 $(call inherit-product, build/target/product/vboot.mk)
