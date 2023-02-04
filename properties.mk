@@ -1,6 +1,7 @@
 # AV
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.media.avsync=true
+    persist.sys.media.avsync=true \
+    ro.hardware.audio.primary=sphynx
 
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \

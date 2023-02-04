@@ -77,4 +77,7 @@ ifeq ($(WITH_TWRP),true)
 include device/google/sphynx/twrp/twrp.mk
 endif
 
+# Audio
+BOARD_USES_TINYHAL_AUDIO := true
+
 include device/nvidia/t210-common/BoardConfigCommon.mk
