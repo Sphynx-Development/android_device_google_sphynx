@@ -15,9 +15,9 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE        := fstab.dragon
+LOCAL_MODULE        := fstab.sphynx
 LOCAL_MODULE_CLASS  := ETC
-LOCAL_SRC_FILES     := fstab.dragon
+LOCAL_SRC_FILES     := fstab.sphynx
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 

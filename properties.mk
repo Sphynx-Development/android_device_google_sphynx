@@ -11,6 +11,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += \
     persist.sys.NV_ECO.IF.CHARGING=false
 
+# FSTab
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.fstab_suffix=sphynx
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.lineage.tegra.model=$(PRODUCT_DEVICE) \
