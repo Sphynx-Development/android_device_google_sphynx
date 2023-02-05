@@ -60,7 +60,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := "NV_BUILD_KERNEL_OPTIONS=$(TARGET_TEGRA_KERNEL
 include device/google/sphynx/modules.mk
 
 # Recovery
-TARGET_RECOVERY_FSTAB        := device/google/sphynx/initfiles/fstab.dragon
+TARGET_RECOVERY_FSTAB        := device/google/sphynx/initfiles/fstab.sphynx
 TARGET_RECOVERY_UPDATER_LIBS := librecoveryupdater_tegra
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 

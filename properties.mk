@@ -1,6 +1,7 @@
 # AV
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.media.avsync=true
+    persist.sys.media.avsync=true \
+    ro.hardware.audio.primary=sphynx
 
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -9,6 +10,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Charger
 PRODUCT_SYSTEM_PROPERTY_OVERRIDES += \
     persist.sys.NV_ECO.IF.CHARGING=false
+
+# FSTab
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.fstab_suffix=sphynx
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \

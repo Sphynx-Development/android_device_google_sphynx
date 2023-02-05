@@ -1,0 +1,9 @@
+# BPMP Firmware
+vendor/firmware/nvidia/tegra210/bpmp.bin:vendor/firmware/tegra21x/bpmp_smaug.bin
+
+# WiFi Firmware
+vendor/firmware/fw_bcmdhd.bin
+
+# WiFi Firmware - from foster
+vendor/firmware/bcmdhd_clm_foster.blob
+vendor/firmware/nvram_foster_e_4354.txt:vendor/firmware/nvram_smaug_4354.txt
