@@ -15,12 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_sphynx.mk \
-    $(LOCAL_DIR)/twrp_sphynx.mk
+    $(LOCAL_DIR)/lineage_sphynx.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_sphynx-eng \
     lineage_sphynx-user \
-    lineage_sphynx-userdebug \
-    twrp_sphynx-eng \
-    twrp_sphynx-userdebug
+    lineage_sphynx-userdebug

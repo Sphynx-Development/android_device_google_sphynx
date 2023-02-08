@@ -77,11 +77,6 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION                     := current
 PRODUCT_FULL_TREBLE_OVERRIDE           := true
 
-# TWRP Support
-ifeq ($(WITH_TWRP),true)
-include device/google/sphynx/twrp/twrp.mk
-endif
-
 # Audio
 BOARD_USES_TINYHAL_AUDIO := true
 
