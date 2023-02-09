@@ -13,7 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
-SPHYNX_FIRMWARE_PATH := ../../../../../vendor/nvidia/foster/firmware
+SPHYNX_FIRMWARE_PATH := ../../../../../vendor/google/sphynx/firmware
 
 include $(CLEAR_VARS)
 LOCAL_MODULE               := bpmp_smaug
